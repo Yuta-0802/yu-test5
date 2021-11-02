@@ -1,0 +1,13 @@
+.blogcard-wrap{
+  margin-bottom: rem(24);
+
+  @include mq('md'){
+    margin-top: rem(-2) ;
+    margin-bottom:rem(48);
+    margin-right: rem(10);
+
+    &:nth-child(3n){
+      margin-right: 0;
+    }
+  }
+}

@@ -1,0 +1,51 @@
+.footer{
+  text-align: center;
+  padding: rem(51) 0;
+
+  @include mq('md'){
+    padding:0;
+  }
+}
+
+.footer-wrapper{
+  @include mq('md'){
+    display: flex;
+    padding: rem(32) rem(2) 0 rem(32);
+  }
+}
+
+
+.footer__logo{
+  display: inline-block;
+  width:rem(70);
+  height: rem(30);
+
+  @include mq('md'){
+    height:rem(39);
+    padding-top: rem(4);
+  }
+}
+
+//スマホのみ
+.footer-sp__list li{
+  letter-spacing: rem(1.2);
+  margin-bottom: rem(6.8);
+}
+
+//(C)
+.footer__text{
+  font-size: rem(10);
+  padding-top: rem(26);
+  letter-spacing: rem(1.2);
+
+  @include mq('md'){
+    padding-top: rem(64);
+    padding-bottom: rem(28);
+    font-size: rem(15);
+    line-height: rem(35);
+    font-weight: normal;
+  }
+}
+
+
+

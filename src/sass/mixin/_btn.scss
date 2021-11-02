@@ -1,0 +1,50 @@
+@mixin _btn($type:$initType){
+  width:rem(335);
+  max-width: 100%;
+  padding: rem(9) 0;
+  border: 1px solid $white;
+  font-size: rem(20);
+  color:$white;
+  background:$gray;
+  letter-spacing: rem(2);
+
+
+  
+//グレーから白のボタン
+@if( $type == 'normal' ){
+  @include _btn-animation;
+  @include mq("md") {
+    line-height:rem(54);
+    padding:rem(2) 0;
+    width:rem(360);
+    font-weight: $normal;
+
+    &:hover {
+      color:$gray;
+    }
+  
+    &::before {
+      background: $white;
+	}
+}
+}
+
+
+//白からグレーのボタン
+@else if( $type == 'small' ){
+  @include _btn-animation;
+  @include mq("md") {
+    background:$white;
+    color:$black;
+    border:none;
+    
+    &:hover{
+      color:$white;
+    }
+  
+    &::before {
+      background: $gray;
+	}
+}
+}
+}

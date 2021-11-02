@@ -1,0 +1,57 @@
+@import "mixin/_btn";
+@import "mixin/_btn-animation";
+
+.contact{
+  background: $light-gray;
+}
+
+.contact-wrap{
+  padding:rem(18) $padding-sp rem(64) $padding-sp;
+
+  @include mq('md'){
+    padding:rem(56) 0 rem(148) 0;
+  }
+}
+
+.contact-titlewrap {
+  text-align:center;
+
+  @include mq('md'){
+    text-align:left;
+  }
+}
+
+.contact-title{
+  font-size: rem(20);
+  font-weight: $regular;
+  letter-spacing:rem(2);
+  text-align: center;
+  margin-top:rem(-26);
+
+  @include mq('md'){
+    margin-top:rem(-68);
+    font-size: rem(30);
+    line-height:rem(35);
+  }
+}
+
+
+.contact-texts{
+  @include mq('md'){
+    text-align: center;
+  }
+}
+
+.contact-texts__text{
+  padding: rem(19) 0 rem(44) 0;
+  letter-spacing: rem(2.2);
+
+  @include mq('md'){
+    padding:rem(20) 0 rem(60) 0;
+  }
+}
+
+.contact-btn{
+  @include _btn('normal');
+  font-size: rem(20);
+}

@@ -1,0 +1,73 @@
+@import "mixin/_btn";
+@import "mixin/_btn-animation";
+
+
+
+.news-wrap{
+  display: flex;
+  flex-direction: column;
+  margin:auto;
+  width:rem(335);
+  max-width:100%;
+  padding-top:rem(25);
+
+  @include mq("md") {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: rem(1280);
+    padding-top:rem(27) ;
+  }
+}
+
+.news-index{
+  display: flex;
+  align-items: center;
+}
+
+.news-index__date{
+  width:rem(80);
+  margin-right:rem(32);
+  font-weight: $regular;
+
+  @include mq("md") {
+    margin-right:rem(46);
+  }
+}
+
+.news-index__title{
+  width:rem(99);
+  padding:rem(6) 0 rem(2) 0;
+  text-align: center;
+  border: 1px solid $white;
+  font-size: rem(14);
+
+  @include mq("md") {
+    font-weight: $normal;
+    padding:rem(6) 0 rem(3) 0;
+  }
+}
+
+.news__text{
+  padding-top:rem(16);
+  padding-bottom: rem(26);
+
+  @include mq("md") {
+    padding:0 rem(48) 0 rem(61);
+  &:hover{
+    text-decoration: underline;
+   }
+  }
+}
+
+
+.news__btn{
+  @include mq("md"){
+  @include _btn('small');
+    font-size: rem(16);
+    width:rem(134);
+    height:rem(31);
+    letter-spacing: rem(0.5);
+    line-height:rem(16);
+  }
+}

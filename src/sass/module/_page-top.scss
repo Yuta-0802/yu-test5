@@ -1,0 +1,25 @@
+#page-top{
+  width: rem(45);
+  height: rem(45);
+  position: fixed;
+  z-index:10;
+  right: rem(20);
+  bottom: rem(41);
+  background:$white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color:$gray;
+  transition: all  0.3s ease;
+
+  &:hover{
+    background: $gray;
+    color:$white;
+  }
+
+  @include mq('md'){
+    right: rem(32);
+    bottom: rem(32);
+  }
+}
+

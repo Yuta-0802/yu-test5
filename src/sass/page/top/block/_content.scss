@@ -1,0 +1,73 @@
+//線
+.content{
+  position: relative;
+
+  &::after{
+    content: '';
+    position:absolute;
+    z-index:-5;
+    width:100%;
+    height:rem(1);
+    left:0;
+    top:rem(358);
+    background:$dark-yellow;
+    transform: skewY(61.09deg);
+
+    @include mq('md'){
+      top:rem(580);
+      transform: skewY(45deg);
+    }
+  }
+}
+
+
+.content-flex {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height:rem(336);
+  text-align: center;
+  background: $white;
+  
+  @include mq("md") {
+  flex-wrap: nowrap;
+  height:rem(320);
+  }
+}
+
+.content-flex__item{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width:50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-size: rem(20);
+  letter-spacing: rem(2);
+
+  &:hover{
+    opacity: 0.6;
+  }
+
+  @include mq ('md'){
+    font-size: rem(25);
+  }
+
+}
+
+.content-flex__img00 {
+  background-image: url("/assets/images/common/content0.jpg");
+}
+
+.content-flex__img01 { 
+  background-image: url("/assets/images/common/content01.jpg");
+}
+
+.content-flex__img02 { 
+  background-image: url("/assets/images/common/content02.jpg");
+}
+
+.content-flex__img03 {
+  background-image: url("/assets/images/common/content03.jpg");
+}

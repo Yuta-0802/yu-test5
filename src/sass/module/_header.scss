@@ -1,0 +1,49 @@
+@import "mixin/_btn";
+@import "mixin/_btn-animation";
+
+#header{
+  height:rem(50);
+  position: fixed;
+  z-index: 3;
+  width:100%;
+  background:rgba(117, 106, 106, 0.5);
+    
+  @include mq("md") {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.header-wrap{
+  display: flex;
+  align-items: center;
+  padding:0 rem(22);
+
+  @include mq("md") {
+    padding-left:rem(33);
+  }
+}
+
+
+.header__logo{
+  width:rem(70);
+
+  @include mq("md") {
+  width:rem(94);
+  }
+}
+
+
+.header__contact a{
+  @include _btn('small');
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:rem(170);
+    max-width:100%;
+    height:rem(50);
+    font-size: rem(16);
+}
+
+
+

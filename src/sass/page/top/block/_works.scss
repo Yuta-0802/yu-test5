@@ -1,0 +1,63 @@
+//背景
+.works-background{
+  background: $gray;
+
+  @include mq('md'){
+    background:linear-gradient(90deg, rgba(0,0,0,0) 30%, $light-gray 30%);
+  }
+}
+
+.works-flex{
+  @include mq('md'){
+    flex-direction: row;
+  }
+}
+
+.works-texts{
+  padding:rem(18) $padding-sp $padding-sp $padding-sp;
+
+  @include mq('md'){
+    padding:0 0 rem(6) rem(32);
+  }
+}
+
+
+//スライダー
+.slider{
+  @include mq('md'){
+    width:rem(557);
+    max-width:100%;
+  }
+}
+
+//スライダーのドット
+.slick-dots {
+  position: absolute;
+  width:100%;
+  text-align: center;
+}
+
+.slick-dots li {
+  display:inline-block;
+  margin:0 rem(5);
+}
+
+.slick-dots li button::before{
+	font-size:rem(4);
+}
+
+.slick-dots button {
+  color: transparent;
+  width:rem(4);
+  height:rem(8);
+  border-radius:50%;
+  background:#ccc;
+}
+
+.slick-dots .slick-active button{
+  background:$dark-yellow;
+}
+
+
+
+

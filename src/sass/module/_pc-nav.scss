@@ -1,0 +1,20 @@
+.pc-nav{
+  display: none;
+  @include mq("md") {
+    display: flex;
+    margin-left:auto;
+    align-items: center;
+  }
+}
+
+.pc-nav__items{
+    margin-right: rem(30);
+    letter-spacing: rem(2);
+    line-height:rem(35);
+
+    &:hover{
+      border-bottom: solid rem(1) $yellow;
+      }
+
+}
+

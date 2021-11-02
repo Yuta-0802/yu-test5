@@ -1,0 +1,56 @@
+//背景
+.overview-background{
+  background: $gray;
+
+  @include mq('md'){
+    background:linear-gradient(90deg, $light-gray 70%,rgba(0,0,0,0) 70%);
+  }
+}
+
+.overview{
+  position: relative;
+
+  &::after{
+    content: '';
+    position:absolute;
+    z-index:-5;
+    width:100%;
+    height:rem(1);
+    right:0;
+    top:rem(105);
+    background:$dark-yellow;
+    transform: skewY(105.05deg);
+
+    @include mq('md'){
+      top:rem(425);
+      transform: skewY(-45deg);
+    }
+  }
+}
+
+
+
+.overview-flex{
+  @include mq('md'){
+    flex-direction: row-reverse;
+  }
+}
+
+.overview-img{
+  width:100%;
+  margin:auto;
+
+  @include mq('md'){
+    width:rem(557);
+    max-width:100%;
+  }
+}
+
+.overview-texts{
+  padding:rem(24) $padding-sp $padding-sp $padding-sp;
+
+  @include mq('md'){
+    padding:0 rem(32) 0 0;
+  }
+
+}
